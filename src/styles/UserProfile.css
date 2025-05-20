@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #4e73df;
+  --primary-light: #eaedfc;
+  --primary-dark: #3a56b0;
+  --primary-gradient: linear-gradient(135deg, #4e73df, #3a56b0);
+  --success: #1cc88a;
+  --warning: #f6c23e;
+  --info: #36b9cc;
+  --danger: #e74a3b;
+  --light-bg: #f8f9fc;
+  --dark-text: #333;
+  --grey-text: #6c757d;
+  --white: #fff;
+  --shadow: 0 8px 30px rgba(78, 115, 223, 0.07);
+  --border-radius: 12px;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--light-bg);
+  color: var(--dark-text);
+}
+
+
+.welcome-banner {
+  background: var(--primary-gradient);
+  color: white;
+  padding: 2.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-banner::before {
+  content: '';
+  position: absolute;
+  top: -30%;
+  right: -5%;
+  width: 60%;
+  height: 200%;
+  background: linear-gradient(rgba(255,255,255,0.12), rgba(255,255,255,0));
+  transform: rotate(25deg);
+}
+
+.banner-title {
+  color: white !important;
+  font-weight: 600 !important;
+  margin-bottom: 0.5rem !important;
+  position: relative;
+  z-index: 1;
+}
+
+.banner-subtitle {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 1.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+
+.profile-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  border-top: 3px solid var(--primary);
+}
+
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(78, 115, 223, 0.12);
+}
+
+
+.section-title {
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+  display: flex;
+  align-items: center;
+}
+
+
+.profile-form .ant-form-item-label > label {
+  color: var(--dark-text);
+  font-weight: 500;
+}
+
+.profile-form .ant-input {
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  padding: 8px 11px;
+  transition: all 0.3s ease;
+}
+
+.profile-form .ant-input:hover {
+  border-color: var(--primary-light);
+}
+
+.profile-form .ant-input:focus, 
+.profile-form .ant-input-focused {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(78, 115, 223, 0.2);
+}
+
+.profile-form .ant-input-prefix {
+  color: var(--primary);
+  margin-right: 8px;
+}
+
+
+.save-button {
+  background: var(--primary-gradient) !important;
+  border: none !important;
+  border-radius: 8px;
+  height: 38px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(78, 115, 223, 0.2);
+}
+
+.save-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(78, 115, 223, 0.3);
+}
+
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+}
+
+.loading-text {
+  margin-top: 1rem;
+  color: var(--grey-text);
+}
+
+
+@media (max-width: 992px) {
+  .welcome-banner {
+    padding: 2rem;
+  }
+  
+  .banner-title {
+    font-size: 1.75rem !important;
+  }
+  
+  .banner-subtitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .welcome-banner {
+    padding: 1.5rem;
+  }
+  
+  .banner-title {
+    font-size: 1.5rem !important;
+  }
+  
+  .profile-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .welcome-banner {
+    padding: 1.25rem;
+  }
+  
+  .banner-title {
+    font-size: 1.3rem !important;
+  }
+  
+  .banner-subtitle {
+    font-size: 0.9rem !important;
+  }
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.profile-card {
+  animation: fadeIn 0.5s ease-out forwards;
+}

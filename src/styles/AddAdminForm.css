@@ -1,0 +1,84 @@
+/* AdminFormStyles.css - Custom styles to complement Bootstrap */
+
+/* Page background */
+.admin-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Form refinements */
+.card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* Soften shadow */
+.shadow-sm {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Focus states for inputs */
+.form-control:focus {
+  border-color: #6610f2;
+  box-shadow: 0 0 0 0.25rem rgba(102, 16, 242, 0.1);
+}
+
+/* Button enhancements */
+.btn-primary {
+  background-color: #6610f2;
+  border-color: #6610f2;
+}
+
+.btn-primary:hover {
+  background-color: #5a0fbe;
+  border-color: #5a0fbe;
+}
+
+.btn-outline-secondary:hover {
+  background-color: #f8f9fa;
+  color: #5a0fbe;
+  border-color: #5a0fbe;
+}
+
+/* Back button */
+.btn-outline-secondary {
+  transition: all 0.2s ease;
+}
+
+/* Animated buttons */
+.btn {
+  transition: all 0.2s ease;
+}
+
+/* Ensure text is legible */
+.text-muted {
+  color: #6c757d !important;
+}
+
+/* Alerts */
+.alert {
+  border-radius: 8px;
+}
+
+/* Ensure text is darker for better readability */
+label {
+  font-weight: 500;
+  color: #343a40;
+}
+
+/* Form section with light border */
+.border {
+  border-color: #e9ecef !important;
+}
+
+/* Better spacing for small screens */
+@media (max-width: 576px) {
+  .card-body {
+    padding: 1.5rem !important;
+  }
+  
+  h1 {
+    font-size: 1.5rem !important;
+  }
+}

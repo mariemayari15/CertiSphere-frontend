@@ -1,0 +1,13 @@
+{
+   "compilerOptions": {
+   "composite": true,                        
+   "strict": true,                           
+   "forceConsistentCasingInFileNames": true, 
+   "types": ["vitest/globals"],
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

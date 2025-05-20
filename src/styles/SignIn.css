@@ -1,0 +1,162 @@
+
+
+.signin-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #f8f9fc;
+  padding: 2rem 0;
+}
+
+
+.signin-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+
+.bg-primary {
+  background-color: #4e73df !important;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.logo-circle {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  color: #4e73df;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-name {
+  color: white;
+}
+
+
+.benefit-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.form-section {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.05);
+  transition: box-shadow 0.2s;
+}
+
+.form-section:hover {
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.1);
+}
+
+.signin-button {
+  background-color: #4e73df;
+  border-color: #4e73df;
+  transition: all 0.2s;
+}
+
+.signin-button:hover {
+  background-color: #2e59d9;
+  border-color: #2e59d9;
+  transform: translateY(-1px);
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15);
+}
+
+.signin-button:active {
+  transform: translateY(0);
+}
+
+
+a {
+  color: #4e73df;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2e59d9;
+}
+
+.decoration {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.circle-1 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: -150px;
+  right: -150px;
+}
+
+.circle-2 {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: -80px;
+  right: 30px;
+}
+
+.circle-3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  bottom: 40px;
+  right: -20px;
+}
+
+
+@media (max-width: 992px) {
+  .signin-wrapper {
+    padding: 1rem;
+  }
+  
+  .hero-content {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .decoration {
+    display: none;
+  }
+  
+  .form-wrapper {
+    padding: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .benefit-item {
+    margin-bottom: 1.5rem;
+  }
+  
+  .benefit-icon {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .benefit-info h4 {
+    font-size: 1.1rem !important;
+  }
+  
+  .signin-card {
+    border-radius: 0.5rem;
+  }
+}
