@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Login from '../features/admin/Login';
+import Login from '../pages/admin/Login';
 import { test, expect, vi, beforeEach, afterAll } from 'vitest';
 
 const consoleError = vi.spyOn(console, 'error').mockImplementation(() => {});

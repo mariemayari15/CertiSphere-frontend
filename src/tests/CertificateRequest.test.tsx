@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Request from '../features/client/certificates/Request';
+import Request from '../pages/client/certificates/Request';
 import { test, expect, vi, beforeAll, beforeEach } from 'vitest';
 
 

@@ -1,6 +1,6 @@
 import { render, screen, fireEvent} from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import SignUp from '../features/client/SignUp';
+import SignUp from '../pages/client/SignUp';
 import { test, expect, vi, beforeEach, afterEach } from 'vitest';
 import { registerClient } from '../services/authService';
 

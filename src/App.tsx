@@ -13,47 +13,47 @@ import ProtectedRoute from './layouts/ProtectedRoute';
 const { Content } = Layout;
 
 // ─── Public Pages 
-import SignUp from './features/client/SignUp';
-import SignIn from './features/client/SignIn';
-import ForgotPasswordPage from './features/client/ForgotPassword';
-import ResetPassword from './features/client/ResetPassword';
+import SignUp from './pages/client/SignUp';
+import SignIn from './pages/client/SignIn';
+import ForgotPasswordPage from './pages/client/ForgotPassword';
+import ResetPassword from './pages/client/ResetPassword';
 
 // ─── Client 
 import ClientLayout from './layouts/ClientLayout';
-import UserHome from './features/client/UserHome';
-import RequestCertificate from './features/client/certificates/Request';
-import Progress from './features/client/certificates/Progress';
-import Completed from './features/client/certificates/Completed';
-import Pipeline from './features/client/certificates/Pipeline';
-import UploadedDocuments from './features/client/UploadedDocuments';
-import UserConversations from './features/client/conversations/List';
-import UserChat from './features/client/conversations/Chat';
-import UserNotifications from './features/client/Notifications';
-import PendingPayments from './features/client/payment/PendingPayments';
-import PaymentCheckout from './features/client/payment/PaymentCheckout';
-import UserSettings from './features/client/Settings';
-import UserProfile from './features/client/Profile';
-import ChangePasswordUser from './features/client/ChangePassword';
-import PaymentHistory from './features/client/payment/PaymentHistory';
+import UserHome from './pages/client/UserHome';
+import RequestCertificate from './pages/client/certificates/Request';
+import Progress from './pages/client/certificates/Progress';
+import Completed from './pages/client/certificates/Completed';
+import Pipeline from './pages/client/certificates/Pipeline';
+import UploadedDocuments from './pages/client/UploadedDocuments';
+import UserConversations from './pages/client/conversations/List';
+import UserChat from './pages/client/conversations/Chat';
+import UserNotifications from './pages/client/Notifications';
+import PendingPayments from './pages/client/payment/PendingPayments';
+import PaymentCheckout from './pages/client/payment/PaymentCheckout';
+import UserSettings from './pages/client/Settings';
+import UserProfile from './pages/client/Profile';
+import ChangePasswordUser from './pages/client/ChangePassword';
+import PaymentHistory from './pages/client/payment/PaymentHistory';
 
 // ─── Admin 
-import Login from './features/admin/Login';
+import Login from './pages/admin/Login';
 import AdminLayout from './layouts/AdminLayout';
-import AdminHome from './features/admin/AdminHome';
-import ConversationsList from './features/admin/conversations/List';
-import AdminChat from './features/admin/conversations/Chat';
-import CertificatesList from './features/admin/certificates/List';
-import CertificateDetail from './features/admin/certificates/Detail';
-import UsersList from './features/admin/users/List';
-import UserDetail from './features/admin/users/Detail';
-import AddAdmin from './features/admin/AddAdmin';
-import AdminNotifications from './features/admin/Notifications';
+import AdminHome from './pages/admin/AdminHome';
+import ConversationsList from './pages/admin/conversations/List';
+import AdminChat from './pages/admin/conversations/Chat';
+import CertificatesList from './pages/admin/certificates/List';
+import CertificateDetail from './pages/admin/certificates/Detail';
+import UsersList from './pages/admin/users/List';
+import UserDetail from './pages/admin/users/Detail';
+import AddAdmin from './pages/admin/AddAdmin';
+import AdminNotifications from './pages/admin/Notifications';
 
-import AdminSettings from './features/admin/Settings';
-import ChangePasswordAdmin from './features/admin/ChangePassword';
-import AdminProfile from './features/admin/Profile';
-import TeamChat from './features/admin/conversations/TeamChat';
-import Payments  from './features/admin/Payments';
+import AdminSettings from './pages/admin/Settings';
+import ChangePasswordAdmin from './pages/admin/ChangePassword';
+import AdminProfile from './pages/admin/Profile';
+import TeamChat from './pages/admin/conversations/TeamChat';
+import Payments  from './pages/admin/Payments';
 
 const stripePromise = loadStripe(
   'pk_test_51R3TTo2fYdZSuWCEGOtdbGGd3bWcVf5UmSR9bHicOzui3lPQyhWuh0ISg8KgJlpOOelArbqndlOdS47695g11f6d00BJBdzkI1'

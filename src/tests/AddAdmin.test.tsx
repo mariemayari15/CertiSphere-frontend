@@ -1,6 +1,6 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import AddAdmin from '../features/admin/AddAdmin';
+import AddAdmin from '../pages/admin/AddAdmin';
 import {  test, expect, vi, beforeEach, afterEach } from 'vitest';
 
 

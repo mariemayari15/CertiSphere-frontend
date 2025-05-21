@@ -1,6 +1,6 @@
 import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import PaymentCheckout from '../features/client/payment/PaymentCheckout';
+import PaymentCheckout from '../pages/client/payment/PaymentCheckout';
 import { test, expect, vi, beforeAll, beforeEach } from 'vitest';
 
 import {
