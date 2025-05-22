@@ -77,18 +77,7 @@ const TopBar: React.FC<TopBarProps> = ({
       </div>
 
       <div className="topbar-right">
-        {showSearch && (
-          <div className="search-box">
-            <input
-              type="text"
-              placeholder="Search..."
-              className="search-input"
-              value={searchTerm}
-              onChange={e => setSearchTerm(e.target.value)}
-            />
-            <FiSearch className="search-icon" />
-          </div>
-        )}
+      
 
         <div className="notification-wrapper">
           <button
