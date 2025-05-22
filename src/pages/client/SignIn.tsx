@@ -33,7 +33,7 @@ const SignIn: React.FC = () => {
           <div className="col-lg-10">
             <div className="card signin-card overflow-hidden shadow-lg border-0">
               <div className="row g-0">
-                <div className="col-lg-6 bg-primary text-white p-4 p-lg-5 d-flex flex-column">
+                <div className="col-lg-6 bg-certisphere-blue text-white p-4 p-lg-5 d-flex flex-column">
                   <div className="brand-container mb-4">
                     <div className="d-flex align-items-center mb-3">
                       <div className="logo-circle me-2">

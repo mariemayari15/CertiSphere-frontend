@@ -115,7 +115,7 @@ const SignUp: React.FC = () => {
           <div className="col-xxl-10 col-xl-11 col-lg-12">
             <div className="card signup-card overflow-hidden shadow-lg border-0">
               <div className="row g-0">
-                <div className="col-lg-5 bg-primary text-white p-4 p-lg-5 d-flex flex-column">
+                <div className="col-lg-5 bg-certisphere-blue text-white p-4 p-lg-5 d-flex flex-column">
                   <div className="brand-container mb-4">
                     <div className="d-flex align-items-center mb-3">
                       <div className="logo-circle me-2">

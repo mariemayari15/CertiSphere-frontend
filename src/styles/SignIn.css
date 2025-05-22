@@ -8,6 +8,9 @@
   padding: 2rem 0;
 }
 
+.bg-certisphere-blue {
+  background-color: #4c6ef5 !important; 
+}
 
 .signin-card {
   border-radius: 0.75rem;

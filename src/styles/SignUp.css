@@ -13,6 +13,10 @@
   border-radius: 0.75rem;
   overflow: hidden;
 }
+.bg-certisphere-blue {
+  background-color: #4c6ef5 !important;
+}
+
 
 
 .bg-primary {
