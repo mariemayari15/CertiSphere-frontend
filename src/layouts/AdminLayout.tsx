@@ -110,8 +110,9 @@ const AdminLayout: React.FC = () => {
           <Sidebar
             links={SIDEBAR_LINKS}
             isSidebarCollapsed={isSidebarCollapsed}
-            onMobileMenuClose={closeMobile}
-          />
+            onMobileMenuClose={closeMobile} onSidebarToggle={function (): void {
+              throw new Error('Function not implemented.');
+            } }          />
         </nav>
 
       

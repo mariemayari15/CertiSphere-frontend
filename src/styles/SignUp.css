@@ -321,3 +321,19 @@ select.form-select option {
     border-radius: 0.5rem;
   }
 }
+/* Fix pointer-events for all decorative circles */
+.decoration-circles,
+.circle,
+.circle-1,
+.circle-2,
+.circle-3,
+.decoration {
+  pointer-events: none !important;
+}
+
+/* Make sure your card/form is always above decorations */
+.signup-card,
+.signin-card {
+  position: relative;
+  z-index: 2;
+}

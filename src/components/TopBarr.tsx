@@ -4,6 +4,7 @@ import {
   FiMenu,
   FiCalendar,
   FiBell,
+  FiUser,
   FiLogOut,
   FiSettings,
   FiSearch,
@@ -15,15 +16,16 @@ interface TopBarProps {
   showSearch?: boolean;
   onToggleMobile: () => void;
   onLogout: () => void;
- 
+  /** e.g. '/api/notifications' or '/api/admin/notifications' */
   notificationsApiPath?: string;
- 
+  /** e.g. '/notifications' or '/admin/notifications' */
   notificationsRoutePath?: string;
 }
 
 const TopBar: React.FC<TopBarProps> = ({
   pageTitle,
   clientCode = '',
+  showSearch = false,
   onToggleMobile,
   onLogout,
   notificationsApiPath = '/api/notifications',
@@ -38,7 +40,7 @@ const TopBar: React.FC<TopBarProps> = ({
       day: 'numeric',
     })
   );
-  
+  const [searchTerm, setSearchTerm] = useState('');
   const [unreadCount, setUnreadCount] = useState(0);
 
   useEffect(() => {
@@ -75,7 +77,18 @@ const TopBar: React.FC<TopBarProps> = ({
       </div>
 
       <div className="topbar-right">
-        
+        {showSearch && (
+          <div className="search-box">
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+              value={searchTerm}
+              onChange={e => setSearchTerm(e.target.value)}
+            />
+            <FiSearch className="search-icon" />
+          </div>
+        )}
 
         <div className="notification-wrapper">
           <button
@@ -97,6 +110,12 @@ const TopBar: React.FC<TopBarProps> = ({
             <span className="admin-name">{clientCode || 'Client'}</span>
           </button>
           <div className="dropdown-content">
+            <button
+              className="dropdown-item"
+              onClick={() => navigate('profile')}
+            >
+              <FiUser /> <span>Profile</span>
+            </button>
             <button
               className="dropdown-item"
               onClick={() => navigate('settings')}
