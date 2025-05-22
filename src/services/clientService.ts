@@ -42,7 +42,7 @@ export interface PaymentRow {
   paid_at: string;
 }
 export async function fetchConversation(conversationId: number, token: string): Promise<ConversationData> {
-  const res = await fetch(`http://localhost:5000/api/conversations/${conversationId}`, {
+  const res = await fetch(`http://13.48.42.53:5000/api/conversations/${conversationId}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -51,7 +51,7 @@ export async function fetchConversation(conversationId: number, token: string): 
 }
 
 export async function fetchCertificateDetail(id: string, token: string) {
-  const res = await fetch(`http://localhost:5000/api/certificates/${id}`, {
+  const res = await fetch(`http://13.48.42.53:5000/api/certificates/${id}`, {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -75,7 +75,7 @@ export async function fetchUserCertificates(token: string, serverUrl: string): P
 
 
 export async function fetchCertificateTypes(token: string): Promise<{certificateTypes: CertificateType[], isoOptions: string[]}> {
-  const res = await fetch('http://localhost:5000/api/certificate-types', {
+  const res = await fetch('http://13.48.42.53:5000/api/certificate-types', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -89,7 +89,7 @@ export async function fetchCertificateTypes(token: string): Promise<{certificate
 export async function uploadDocuments(token: string, fileList: any[]): Promise<{certificateId: number}> {
   const formData = new FormData();
   fileList.forEach((f) => formData.append('documents', f.originFileObj));
-  const res = await fetch('http://localhost:5000/api/upload-documents', {
+  const res = await fetch('http://13.48.42.53:5000/api/upload-documents', {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}` },
     body: formData,
@@ -103,7 +103,7 @@ export async function generateCertificate(
   token: string,
   params: { certificateId: number, certificateType: number, certificateName: string, isoStandards: string[] }
 ): Promise<{message: string}> {
-  const res = await fetch('http://localhost:5000/api/generate-certificate', {
+  const res = await fetch('http://13.48.42.53:5000/api/generate-certificate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -117,7 +117,7 @@ export async function generateCertificate(
 }
 
 export async function createPaymentIntent(certificateId: number, token: string) {
-  const res = await fetch('http://localhost:5000/api/pay-certificate', {
+  const res = await fetch('http://13.48.42.53:5000/api/pay-certificate', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -133,7 +133,7 @@ export async function createPaymentIntent(certificateId: number, token: string) 
 
 export async function markCertificatePaid(certificateId: number, token: string) {
   const res = await fetch(
-    `http://localhost:5000/api/certificates/${certificateId}/mark-paid`,
+    `http://13.48.42.53:5000/api/certificates/${certificateId}/mark-paid`,
     {
       method: 'PATCH',
       headers: { Authorization: `Bearer ${token}` },
@@ -145,7 +145,7 @@ export async function markCertificatePaid(certificateId: number, token: string) 
 }
 
 export async function fetchUserPayments(token: string): Promise<PaymentRow[]> {
-  const res = await fetch('http://localhost:5000/api/my-payments', {
+  const res = await fetch('http://13.48.42.53:5000/api/my-payments', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -158,7 +158,7 @@ export async function fetchUserPayments(token: string): Promise<PaymentRow[]> {
 
 
 export async function fetchPendingCertificates(token: string): Promise<CertificateRow[]> {
-  const res = await fetch('http://localhost:5000/api/my-pending-certificates', {
+  const res = await fetch('http://13.48.42.53:5000/api/my-pending-certificates', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -179,7 +179,7 @@ export interface Notification {
 
 
 export async function fetchUserNotifications(token: string) {
-  const res = await fetch('http://localhost:5000/api/notifications', {
+  const res = await fetch('http://13.48.42.53:5000/api/notifications', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();
@@ -189,7 +189,7 @@ export async function fetchUserNotifications(token: string) {
 
 
 export async function markNotificationAsRead(notifId: number, token: string) {
-  const res = await fetch(`http://localhost:5000/api/notifications/${notifId}`, {
+  const res = await fetch(`http://13.48.42.53:5000/api/notifications/${notifId}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -206,7 +206,7 @@ export async function markNotificationAsRead(notifId: number, token: string) {
 export async function uploadNotificationDocument(notifId: number, file: File, token: string) {
   const formData = new FormData();
   formData.append('document', file);
-  const res = await fetch(`http://localhost:5000/api/notifications/${notifId}/upload-document`, {
+  const res = await fetch(`http://13.48.42.53:5000/api/notifications/${notifId}/upload-document`, {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}` },
     body: formData
@@ -230,7 +230,7 @@ export interface Profile {
 
 
 export async function fetchUserProfile(token: string): Promise<Profile> {
-  const res = await fetch('http://localhost:5000/api/profile', {
+  const res = await fetch('http://13.48.42.53:5000/api/profile', {
     headers: { Authorization: `Bearer ${token}` }
   });
   const data = await res.json();
@@ -240,7 +240,7 @@ export async function fetchUserProfile(token: string): Promise<Profile> {
 
 
 export async function updateUserProfile(profile: Profile, token: string) {
-  const res = await fetch('http://localhost:5000/api/profile', {
+  const res = await fetch('http://13.48.42.53:5000/api/profile', {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
@@ -258,7 +258,7 @@ export async function requestAccountDeletion() {
   const token = localStorage.getItem('authToken');
   if (!token) throw new Error('You must be logged-in to delete the account.');
 
-  const res = await fetch('http://localhost:5000/api/request-account-deletion', {
+  const res = await fetch('http://13.48.42.53:5000/api/request-account-deletion', {
     method: 'POST',
     headers: { Authorization: `Bearer ${token}` },
   });
@@ -278,7 +278,7 @@ export interface MyDocument {
 }
 
 export async function fetchUserDocuments(token: string): Promise<MyDocument[]> {
-  const res = await fetch('http://localhost:5000/api/my-documents', {
+  const res = await fetch('http://13.48.42.53:5000/api/my-documents', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await res.json();

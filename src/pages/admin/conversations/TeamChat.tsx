@@ -15,7 +15,7 @@ interface DecodedToken { userId:number; role:string; exp:number; }
 const TeamChat: React.FC = () => {
   const navigate   = useNavigate();
   const token      = localStorage.getItem('authToken') || '';
-  const BASE_URL   = 'http://localhost:5000';
+  const BASE_URL   = 'http://13.48.42.53:5000';
 
   const [convId, setConvId]       = useState<number | null>(null);
   const [adminCodeMap, setMap]    = useState<Record<number, string>>({});

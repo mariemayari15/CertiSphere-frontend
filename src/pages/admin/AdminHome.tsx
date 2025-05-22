@@ -61,7 +61,7 @@ const AdminHome: React.FC = () => {
     (async () => {
       try {
         setLoading(true);
-        const res  = await fetch('http://localhost:5000/api/admin/dashboard-stats', {
+        const res  = await fetch('http://13.48.42.53:5000/api/admin/dashboard-stats', {
           headers: { Authorization: `Bearer ${token}` },
           signal
         });

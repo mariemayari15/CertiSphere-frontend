@@ -181,7 +181,7 @@ const Pipeline: React.FC = () => {
                 type="primary" 
                 icon={<DownloadOutlined />} 
                 className="download-btn ms-md-2 mt-2 mt-md-0"
-                href={`http://localhost:5000/certificates/certificate_${certificate.id}.pdf`}
+                href={`http://13.48.42.53:5000/certificates/certificate_${certificate.id}.pdf`}
                 target="_blank"
               >
                 Download Certificate

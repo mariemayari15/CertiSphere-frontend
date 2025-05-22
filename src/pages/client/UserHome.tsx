@@ -30,10 +30,10 @@ const UserHome: React.FC = () => {
       return;
     }
     Promise.all([
-      fetch('http://localhost:5000/api/my-certificates', {
+      fetch('http://13.48.42.53:5000/api/my-certificates', {
         headers: { Authorization: `Bearer ${token}` },
       }).then((r) => r.json()),
-      fetch('http://localhost:5000/api/my-documents', {
+      fetch('http://13.48.42.53:5000/api/my-documents', {
         headers: { Authorization: `Bearer ${token}` },
       }).then((r) => r.json()),
     ])

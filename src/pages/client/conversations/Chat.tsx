@@ -40,7 +40,7 @@ const UserChat: React.FC = () => {
   if (Number.isNaN(convoIdNum))      return <div>Invalid conversation ID!</div>;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/api/conversations/${convoIdNum}`, {
+    fetch(`http://13.48.42.53:5000/api/conversations/${convoIdNum}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(r => r.json())

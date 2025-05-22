@@ -5,7 +5,7 @@ interface LoginResponse {
   }
   
   export async function login(clientCode: string, password: string): Promise<LoginResponse> {
-    const response = await fetch('http://localhost:5000/api/login', {
+    const response = await fetch('http://13.48.42.53:5000/api/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ clientCode, password }),
@@ -20,7 +20,7 @@ interface LoginResponse {
   }
   
   export async function requestPasswordReset(clientCode: string): Promise<{ message: string }> {
-    const response = await fetch('http://localhost:5000/api/forgot-password', {
+    const response = await fetch('http://13.48.42.53:5000/api/forgot-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ clientCode }),
@@ -35,7 +35,7 @@ interface LoginResponse {
   }
   
   export async function resetPassword(token: string, newPassword: string): Promise<{ message: string }> {
-    const response = await fetch('http://localhost:5000/api/reset-password', {
+    const response = await fetch('http://13.48.42.53:5000/api/reset-password', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token, newPassword }),
@@ -49,7 +49,7 @@ interface LoginResponse {
     return data;
   }
   export async function requestPasswordChange(oldPassword: string, token: string) {
-    const res = await fetch('http://localhost:5000/api/change-password-request', {
+    const res = await fetch('http://13.48.42.53:5000/api/change-password-request', {
       method : 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -65,7 +65,7 @@ interface LoginResponse {
 
 
 export async function loginClient(clientCode: string, password: string): Promise<string> {
-  const res = await fetch('http://localhost:5000/api/login', {
+  const res = await fetch('http://13.48.42.53:5000/api/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ clientCode, password }),
@@ -94,7 +94,7 @@ export interface RegisterFormData {
 }
 
 export async function registerClient(formData: RegisterFormData): Promise<void> {
-  const res = await fetch('http://localhost:5000/api/register', {
+  const res = await fetch('http://13.48.42.53:5000/api/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(formData),

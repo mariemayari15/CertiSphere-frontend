@@ -30,7 +30,7 @@ const Chat: React.FC<ChatProps> = ({
   role,
   token,
   clientCode: propClientCode,
-  serverUrl = 'http://localhost:5000',
+  serverUrl = 'http://13.48.42.53:5000',
   showAdminCode = false,
   adminCodeMap = {},
 }) => {

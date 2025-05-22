@@ -13,7 +13,7 @@ const Notifications: React.FC = () => {
   const token = localStorage.getItem('authToken');
   const navigate = useNavigate();
 
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   useEffect(() => {
     

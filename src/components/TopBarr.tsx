@@ -47,7 +47,7 @@ const TopBar: React.FC<TopBarProps> = ({
     const token = localStorage.getItem('authToken');
     if (!token) return;
 
-    fetch(`http://localhost:5000${notificationsApiPath}`, {
+    fetch(`http://13.48.42.53:5000${notificationsApiPath}`, {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then(res => res.json())

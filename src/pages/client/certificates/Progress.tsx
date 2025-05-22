@@ -18,7 +18,7 @@ const Progress: React.FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
   const navigate = useNavigate();
 
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   useEffect(() => {
     (async () => {

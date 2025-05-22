@@ -77,7 +77,7 @@ const UploadedDocuments: React.FC = () => {
       key: 'file_name',
       render: (_: any, record: MyDocument) => (
         <a
-          href={`http://localhost:5000/${record.file_path}`}
+          href={`http://13.48.42.53:5000/${record.file_path}`}
           target="_blank"
           rel="noopener noreferrer"
           className="file-name-cell"

@@ -32,7 +32,7 @@ const AddAdmin: React.FC = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   
   useEffect(() => {

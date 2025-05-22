@@ -34,7 +34,7 @@ const List: React.FC = () => {
 
   const navigate = useNavigate();
   const token = localStorage.getItem('authToken');
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   useEffect(() => { if (!token) navigate('/admin-login'); }, [token, navigate]);
 

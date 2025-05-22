@@ -51,10 +51,10 @@ const UserConversations: React.FC = () => {
 
     setLoading(true);
     Promise.all([
-      fetch('http://localhost:5000/api/conversations', {
+      fetch('http://13.48.42.53:5000/api/conversations', {
         headers: { Authorization: `Bearer ${token}` },
       }).then(r => r.json()),
-      fetch('http://localhost:5000/api/my-certificates', {
+      fetch('http://13.48.42.53:5000/api/my-certificates', {
         headers: { Authorization: `Bearer ${token}` },
       }).then(r => r.json()),
     ])
@@ -74,7 +74,7 @@ const UserConversations: React.FC = () => {
     setLoading(true);
     const certId = selectedCert === 'other' ? null : Number(selectedCert);
     try {
-      const res  = await fetch('http://localhost:5000/api/conversations', {
+      const res  = await fetch('http://13.48.42.53:5000/api/conversations', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
         body   : JSON.stringify({ certificateId: certId }),

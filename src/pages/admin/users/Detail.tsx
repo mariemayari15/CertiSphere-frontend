@@ -26,7 +26,7 @@ const AdminUserDetail: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   useEffect(() => {
     const storedToken = localStorage.getItem('authToken');

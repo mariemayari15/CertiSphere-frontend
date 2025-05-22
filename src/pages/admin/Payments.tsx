@@ -11,7 +11,7 @@ const Payments: React.FC = () => {
   const [search, setSearch] = useState('');
 
   const token = localStorage.getItem('authToken');
-  const serverUrl = 'http://localhost:5000';
+  const serverUrl = 'http://13.48.42.53:5000';
 
   useEffect(() => {
     try {
